@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://rfrov1wlhuhh"]
+
+[ext_resource type="Script" uid="uid://8go2jxs8jug6" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://dku08k54nuxql" path="res://art/NewArt/Nissan GTR.glb" id="2_i3pqv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hqtel"]
+size = Vector3(3.03848, 1.64697, 6.69885)
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_onrkg")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Charactor" parent="Pivot" instance=ExtResource("2_i3pqv")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0444002, 0.323486, 0.0757446)
+shape = SubResource("BoxShape3D_hqtel")
