@@ -6,6 +6,7 @@ signal hit
 @export var fall_acceleration = 75
 @export var jump_impulse = 30
 @export var bounce_impulse = 20
+var combo =0
 
 
 var target_velocity = Vector3.ZERO
@@ -37,6 +38,8 @@ func _physics_process(delta):
 	# Vertical Velocity
 	if not is_on_floor(): # If in the air, fall towards the floor. Literally gravity
 		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
+	if is_on_floor():
+		combo = 0
 
 	# Moving the Character
 	velocity = target_velocity
@@ -54,7 +57,6 @@ func _physics_process(delta):
 		# This block of code prevents processing duplicate collisions.
 		if collision.get_collider() == null:
 			continue
-
 		# If the collider is with a mob
 		if collision.get_collider().is_in_group("mob"):
 			var mob = collision.get_collider()
@@ -63,6 +65,7 @@ func _physics_process(delta):
 				# If so, we squash it and bounce.
 				mob.squash()
 				target_velocity.y = bounce_impulse
+				combo += 1
 				# Prevent further duplicate calls.
 				break
 				

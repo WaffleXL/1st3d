@@ -7,3 +7,4 @@ res://main.gd
 res://score_label.gd
 res://art/NewArt/Readme.txt
 res://bgm.tscn
+res://combo.gd

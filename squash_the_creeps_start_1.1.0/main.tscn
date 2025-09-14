@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b68ropv3pswl1"]
+[gd_scene load_steps=15 format=3 uid="uid://b68ropv3pswl1"]
 
 [ext_resource type="Script" uid="uid://cubpddhu0t20h" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://rfrov1wlhuhh" path="res://player.tscn" id="1_ig7tw"]
@@ -6,11 +6,16 @@
 [ext_resource type="FontFile" uid="uid://ouy1ptyre1b7" path="res://fonts/Montserrat-Medium.ttf" id="4_lquwl"]
 [ext_resource type="Script" uid="uid://da463nvoge6nl" path="res://score_label.gd" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://c4ydbgh6uabpj" path="res://bgm.tscn" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://2nyod3b04sem" path="res://combo.gd" id="6_272bh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
 size = Vector3(60, 2, 60)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mycd"]
+albedo_color = Color(0.18202, 0.599551, 0.819191, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
+material = SubResource("StandardMaterial3D_7mycd")
 size = Vector3(60, 2, 60)
 
 [sub_resource type="Curve3D" id="Curve3D_ig7tw"]
@@ -135,7 +140,25 @@ theme_override_fonts/font = ExtResource("4_lquwl")
 theme_override_font_sizes/font_size = 50
 text = "PRESS ENTER TO RETRY"
 
+[node name="Combo" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_left = 426.0
+offset_right = 709.0
+offset_bottom = 86.0
+rotation = 0.404916
+theme_override_colors/font_color = Color(0.941586, 0.797036, 0, 1)
+theme_override_fonts/font = ExtResource("4_lquwl")
+theme_override_font_sizes/font_size = 70
+text = "Streak"
+uppercase = true
+script = ExtResource("6_272bh")
+
+[node name="ComboTimer" type="Timer" parent="UserInterface/Combo"]
+wait_time = 5.0
+
 [node name="BGM" parent="." instance=ExtResource("6_7mycd")]
+volume_db = -35.604
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
+[connection signal="timeout" from="UserInterface/Combo/ComboTimer" to="UserInterface/Combo" method="_on_combo_timer_timeout"]
