@@ -1,9 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1757860873
+::res://::1757882814
 default_bus_layout.tres::AudioBusLayout/AudioBusLayout::-1::1757857742::0::1::::<><><>0<>0<><>::
 default_env.tres::Environment/Environment::-1::1757857742::0::1::::<><><>0<>0<><>::
 icon.png::CompressedTexture2D/CompressedTexture2D::539438363478693087::1606009720::1757857833::1::::<><><>0<>0<>82d9c18d5c175f63073f01b667af737e<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
-main.tscn::PackedScene/PackedScene::4631457313931891112::1757860461::0::1::::<><><>0<>0<><>::
+main.tscn::PackedScene::4631457313931891112::1757882814::0::1::::<><><>0<>0<><>::uid://cubpddhu0t20h::::res://main.gd<>uid://rfrov1wlhuhh::::res://player.tscn<>uid://bysrrjqm3h22d::::res://mob.tscn<>uid://ouy1ptyre1b7::::res://fonts/Montserrat-Medium.ttf<>uid://da463nvoge6nl::::res://score_label.gd
+player.gd::GDScript::2329516870016556691::1757880422::0::1::::<>CharacterBody3D<><>0<>0<><>::
+player.tscn::PackedScene::1204590564778393197::1757882814::0::1::::<><><>0<>0<><>::uid://8go2jxs8jug6::::res://player.gd<>uid://3jfmsvsli3bq::::res://art/NewArt/Kitten.glb
+mob.gd::GDScript::4409707075392839725::1757878823::0::1::::<>CharacterBody3D<><>0<>0<><>::
+mob.tscn::PackedScene::4109174775962339069::1757882814::0::1::::<><><>0<>0<><>::uid://b33dh4lwl6vbp::::res://mob.gd<>uid://dku08k54nuxql::::res://art/NewArt/Nissan GTR.glb
+main.gd::GDScript::6179598899500698285::1757882639::0::1::::<>Node<><>0<>0<><>::
+score_label.gd::GDScript::7221061950840886209::1757881368::0::1::::<>Label<><>0<>0<><>::
 ::res://art/::1757860761
 body.material::StandardMaterial3D/StandardMaterial3D::-1::1605908508::0::1::::<><><>0<>0<><>::
 eye.material::StandardMaterial3D/StandardMaterial3D::-1::1606514142::0::1::::<><><>0<>0<><>::
@@ -13,7 +19,8 @@ mob_body.material::StandardMaterial3D/StandardMaterial3D::-1::1606514142::0::1::
 mob_eye.material::StandardMaterial3D/StandardMaterial3D::-1::1605969815::0::1::::<><><>0<>0<><>::
 player.glb::PackedScene/PackedScene::445858769905965830::1606514058::1757857834::1::::<><><>0<>0<>aca4bde2ac76e4dffc5ca101281fa4cd<>res://.godot/imported/player.glb-08dcfb373480a049995065542e37637b.scn::
 pupil.material::StandardMaterial3D/StandardMaterial3D::-1::1606514142::0::1::::<><><>0<>0<><>::
-::res://art/NewArt/::1757860761
+::res://art/NewArt/::1757883372
+december-rain-274814.mp3::AudioStreamMP3::7587038087617143652::1757883372::1757883373::1::::<><><>0<>0<>9e3c9ca79edbd84de4b0e46eda3cde6d<>res://.godot/imported/december-rain-274814.mp3-7421772e9d5186146758db10f60a7dee.mp3str::
 Kitten.glb::PackedScene/PackedScene::1984193014836215314::1757858260::1757858262::1::::<><><>0<>0<>d005d54824422e681940e61fe0f53ab9<>res://.godot/imported/Kitten.glb-d025aab8f0928fca0b8e78144c49c572.scn::uid://dhb0lkh6cdqr4::::res://art/NewArt/Kitten_Tex_Kitten.png
 Kitten_Tex_Kitten.png::CompressedTexture2D/CompressedTexture2D::7654186440310145271::1757858261::1757858263::1::::<><><>0<>0<>b38ed9aa355755855e95496aeaec814b<>res://.godot/imported/Kitten_Tex_Kitten.png-0a756dbed19e72166b204c8cb2991d8c.s3tc.ctex::
 Nissan GTR.glb::PackedScene/PackedScene::7904015471472292503::1757858265::1757858267::1::::<><><>0<>0<>8e5b344c7e3b688dc4823aed2dd45ad9<>res://.godot/imported/Nissan GTR.glb-a61cec8e5d558ff6b496308bd8308869.scn::

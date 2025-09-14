@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b68ropv3pswl1"]
+[gd_scene load_steps=13 format=3 uid="uid://b68ropv3pswl1"]
 
 [ext_resource type="Script" uid="uid://cubpddhu0t20h" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://rfrov1wlhuhh" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bysrrjqm3h22d" path="res://mob.tscn" id="2_1bvp3"]
+[ext_resource type="FontFile" uid="uid://ouy1ptyre1b7" path="res://fonts/Montserrat-Medium.ttf" id="4_lquwl"]
+[ext_resource type="Script" uid="uid://da463nvoge6nl" path="res://score_label.gd" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://c4ydbgh6uabpj" path="res://bgm.tscn" id="6_7mycd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
 size = Vector3(60, 2, 60)
@@ -23,6 +26,8 @@ albedo_color = Color(1, 0.619608, 0.388235, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_0xm2m"]
 material = SubResource("StandardMaterial3D_lquwl")
+
+[sub_resource type="Theme" id="Theme_272bh"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_h2yge")
@@ -81,6 +86,56 @@ mesh = SubResource("CylinderMesh_0xm2m")
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_272bh")
+
+[node name="ScoreLabel" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 297.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_lquwl")
+theme_override_font_sizes/font_size = 35
+text = "SCORE : 0"
+script = ExtResource("5_7mycd")
+
+[node name="Retry" type="ColorRect" parent="UserInterface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.823712, 0.229535, 0.408923, 0.298039)
+
+[node name="Label" type="Label" parent="UserInterface/Retry"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.5
+offset_top = -11.5
+offset_right = 89.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.819608, 0.764706, 1)
+theme_override_fonts/font = ExtResource("4_lquwl")
+theme_override_font_sizes/font_size = 50
+text = "PRESS ENTER TO RETRY"
+
+[node name="BGM" parent="." instance=ExtResource("6_7mycd")]
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

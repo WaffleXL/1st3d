@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4ydbgh6uabpj"]
+
+[ext_resource type="AudioStream" uid="uid://dgdhn5um1ty3u" path="res://art/NewArt/december-rain-274814.mp3" id="1_l7bcd"]
+
+[node name="BGM" type="AudioStreamPlayer"]
+stream = ExtResource("1_l7bcd")
+autoplay = true
+parameters/looping = true
