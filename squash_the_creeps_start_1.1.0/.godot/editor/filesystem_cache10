@@ -1,0 +1,23 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1757860541
+default_bus_layout.tres::AudioBusLayout/AudioBusLayout::-1::1757857742::0::1::::<><><>0<>0<><>::
+default_env.tres::Environment/Environment::-1::1757857742::0::1::::<><><>0<>0<><>::
+icon.png::CompressedTexture2D/CompressedTexture2D::539438363478693087::1606009720::1757857833::1::::<><><>0<>0<>82d9c18d5c175f63073f01b667af737e<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
+main.tscn::PackedScene::4631457313931891112::1757860461::0::1::::<><><>0<>0<><>::
+::res://art/::1757857875
+body.material::StandardMaterial3D/StandardMaterial3D::-1::1605908508::0::1::::<><><>0<>0<><>::
+eye.material::StandardMaterial3D/StandardMaterial3D::-1::1606514142::0::1::::<><><>0<>0<><>::
+House In a Forest Loop.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::4908988025002848313::1580874009::1757857833::1::::<><><>0<>0<>7f0718bc735402eae23917a286aadd5f<>res://.godot/imported/House In a Forest Loop.ogg-1a6a72ae843ad792b7039931227e8d50.oggvorbisstr::
+mob.glb::PackedScene/PackedScene::226941139227478873::1606513980::1757857834::1::::<><><>0<>0<>9a14dda9763594e91929738e04c78f31<>res://.godot/imported/mob.glb-3afb43c03b9d1598b6af5154e2543eac.scn::
+mob_body.material::StandardMaterial3D/StandardMaterial3D::-1::1606514142::0::1::::<><><>0<>0<><>::
+mob_eye.material::StandardMaterial3D/StandardMaterial3D::-1::1605969815::0::1::::<><><>0<>0<><>::
+player.glb::PackedScene/PackedScene::445858769905965830::1606514058::1757857834::1::::<><><>0<>0<>aca4bde2ac76e4dffc5ca101281fa4cd<>res://.godot/imported/player.glb-08dcfb373480a049995065542e37637b.scn::
+pupil.material::StandardMaterial3D/StandardMaterial3D::-1::1606514142::0::1::::<><><>0<>0<><>::
+::res://art/NewArt/::1757860150
+Kitten.glb::PackedScene/PackedScene::1984193014836215314::1757858260::1757858262::1::::<><><>0<>0<>d005d54824422e681940e61fe0f53ab9<>res://.godot/imported/Kitten.glb-d025aab8f0928fca0b8e78144c49c572.scn::uid://dhb0lkh6cdqr4::::res://art/NewArt/Kitten_Tex_Kitten.png
+Kitten_Tex_Kitten.png::CompressedTexture2D/CompressedTexture2D::7654186440310145271::1757858261::1757858263::1::::<><><>0<>0<>b38ed9aa355755855e95496aeaec814b<>res://.godot/imported/Kitten_Tex_Kitten.png-0a756dbed19e72166b204c8cb2991d8c.s3tc.ctex::
+Nissan GTR.glb::PackedScene/PackedScene::7904015471472292503::1757858265::1757858267::1::::<><><>0<>0<>8e5b344c7e3b688dc4823aed2dd45ad9<>res://.godot/imported/Nissan GTR.glb-a61cec8e5d558ff6b496308bd8308869.scn::
+Readme.txt::TextFile::-1::1757860150::0::1::::<><><>0<>0<><>::
+::res://fonts/::1757857833
+LICENSE.txt::TextFile/TextFile::-1::1605988452::0::1::::<><><>0<>0<><>::
+Montserrat-Medium.ttf::FontFile/FontFile::1025435822796462618::1323702000::1757857833::1::::<><><>0<>0<>8dede44e2f73d082d30f3766cf9e544a<>res://.godot/imported/Montserrat-Medium.ttf-e832861e4ad4110e172112dc430c04b0.fontdata::
