@@ -28,13 +28,13 @@ func _on_mob_timer_timeout():
 	add_child(mob)
 	
 	mob.squashed.connect($UserInterface/ScoreLabel._on_mob_squashed.bind())
-	mob.squashed.connect($UserInterface/Combo._on_mob_squashed.bind())
+	mob.squashed.connect($UserInterface/ScoreLabel/Combo._on_mob_squashed.bind())
 
 
 func _on_player_hit() -> void:
 	$MobTimer.stop()
 	$UserInterface/Retry.show()
-	$UserInterface/Combo.hide()
+	$UserInterface/ScoreLabel/Combo.hide()
 	$BGM.stop()
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_accept") and $UserInterface/Retry.visible:

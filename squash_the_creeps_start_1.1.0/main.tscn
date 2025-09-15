@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b68ropv3pswl1"]
+[gd_scene load_steps=16 format=3 uid="uid://b68ropv3pswl1"]
 
 [ext_resource type="Script" uid="uid://cubpddhu0t20h" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://rfrov1wlhuhh" path="res://player.tscn" id="1_ig7tw"]
@@ -12,7 +12,11 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
 size = Vector3(60, 2, 60)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
+albedo_color = Color(0.203922, 1, 1, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
+material = SubResource("StandardMaterial3D_5vw27")
 size = Vector3(60, 2, 60)
 
 [sub_resource type="Curve3D" id="Curve3D_ig7tw"]
@@ -45,21 +49,25 @@ shape = SubResource("BoxShape3D_7dm0k")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
 visible = false
+gi_lightmap_texel_scale = 1.001
 mesh = SubResource("BoxMesh_ig7tw")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 23, -8)
+visible = false
 light_energy = 5.13
 light_cull_mask = 4294966276
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 8, 5)
+visible = false
 light_energy = 5.13
 
 [node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 32, 0)
-layers = 3
-light_energy = 5.13
+transform = Transform3D(27.7563, 96.0546, 1.76391, -16.0845, 2.83613, 98.6572, 94.7147, -27.6673, 16.2371, -21, 168, -15)
+layers = 7
+light_energy = 1.455
+shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
 
@@ -108,27 +116,52 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 833.0
+offset_top = 261.0
+offset_right = 833.0
+offset_bottom = 261.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_272bh")
 
 [node name="ScoreLabel" type="Label" parent="UserInterface"]
 layout_mode = 0
-offset_left = 478.0
-offset_top = 485.0
-offset_right = 735.0
-offset_bottom = 535.0
+offset_left = -717.0
+offset_top = -179.0
+offset_right = -434.0
+offset_bottom = -109.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_lquwl")
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 50
 text = "SCORE : 0"
 script = ExtResource("5_7mycd")
+
+[node name="Combo" type="Label" parent="UserInterface/ScoreLabel"]
+layout_mode = 0
+offset_left = 1369.0
+offset_top = -9.0
+offset_right = 1652.0
+offset_bottom = 77.0
+rotation = 0.404916
+theme_override_colors/font_color = Color(0.941586, 0.797036, 0, 1)
+theme_override_fonts/font = ExtResource("4_lquwl")
+theme_override_font_sizes/font_size = 70
+text = "Streak"
+uppercase = true
+script = ExtResource("6_272bh")
+
+[node name="ComboTimer" type="Timer" parent="UserInterface/ScoreLabel/Combo"]
+wait_time = 2.0
 
 [node name="Retry" type="ColorRect" parent="UserInterface"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -831.0
+offset_top = -267.0
+offset_right = -828.0
+offset_bottom = -259.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.823712, 0.229535, 0.408923, 0.298039)
@@ -140,10 +173,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -89.5
-offset_top = -11.5
-offset_right = 89.5
-offset_bottom = 11.5
+offset_left = -310.0
+offset_top = -31.0
+offset_right = 310.0
+offset_bottom = 31.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 0.819608, 0.764706, 1)
@@ -151,26 +184,9 @@ theme_override_fonts/font = ExtResource("4_lquwl")
 theme_override_font_sizes/font_size = 50
 text = "PRESS ENTER TO RETRY"
 
-[node name="Combo" type="Label" parent="UserInterface"]
-layout_mode = 0
-offset_left = 461.0
-offset_top = 23.0
-offset_right = 744.0
-offset_bottom = 109.0
-rotation = 0.404916
-theme_override_colors/font_color = Color(0.941586, 0.797036, 0, 1)
-theme_override_fonts/font = ExtResource("4_lquwl")
-theme_override_font_sizes/font_size = 70
-text = "Streak"
-uppercase = true
-script = ExtResource("6_272bh")
-
-[node name="ComboTimer" type="Timer" parent="UserInterface/Combo"]
-wait_time = 5.0
-
 [node name="Root Scene" parent="." instance=ExtResource("8_5vw27")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7, -2, 1)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, -3, 0)
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
-[connection signal="timeout" from="UserInterface/Combo/ComboTimer" to="UserInterface/Combo" method="_on_combo_timer_timeout"]
+[connection signal="timeout" from="UserInterface/ScoreLabel/Combo/ComboTimer" to="UserInterface/ScoreLabel/Combo" method="_on_combo_timer_timeout"]

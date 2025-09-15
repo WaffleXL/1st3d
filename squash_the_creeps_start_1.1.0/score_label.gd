@@ -3,7 +3,7 @@ extends Label
 var score = 0
 
 func _on_mob_squashed():
-	score += 1
+	score += 1+(1*$Combo.combo)
 	text = "SCORE : %s" % score
 
 # Called when the node enters the scene tree for the first time.

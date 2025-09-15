@@ -1,10 +1,6 @@
-res://player.gd
 res://main.tscn
 res://player.tscn
-res://mob.gd
 res://mob.tscn
-res://main.gd
-res://score_label.gd
-res://art/NewArt/Readme.txt
-res://bgm.tscn
 res://combo.gd
+res://score_label.gd
+res://main.gd
