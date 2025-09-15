@@ -109,7 +109,7 @@ wait_time = 0.5
 autostart = true
 
 [node name="BGM" parent="." instance=ExtResource("6_7mycd")]
-volume_db = -35.604
+volume_db = -11.244
 
 [node name="UserInterface" type="Control" parent="."]
 layout_mode = 3
