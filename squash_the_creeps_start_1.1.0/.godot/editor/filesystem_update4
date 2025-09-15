@@ -1,6 +1,3 @@
 res://main.tscn
 res://player.tscn
 res://mob.tscn
-res://combo.gd
-res://score_label.gd
-res://main.gd
