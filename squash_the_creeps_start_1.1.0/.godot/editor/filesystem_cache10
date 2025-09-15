@@ -1,17 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1757924679
+::res://::1757942819
 bgm.tscn::PackedScene/PackedScene::6858047163147738475::1757883603::0::1::::<><><>0<>0<><>::uid://dgdhn5um1ty3u::::res://art/NewArt/december-rain-274814.mp3
 combo.gd::GDScript/GDScript::1923418098875293812::1757923527::0::1::::<>Label<><>0<>0<><>::
 default_bus_layout.tres::AudioBusLayout/AudioBusLayout::-1::1757857742::0::1::::<><><>0<>0<><>::
 default_env.tres::Environment/Environment::-1::1757857742::0::1::::<><><>0<>0<><>::
-export_presets.cfg::TextFile/TextFile::-1::1757924043::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1757925084::0::1::::<><><>0<>0<><>::
 icon.png::CompressedTexture2D/CompressedTexture2D::539438363478693087::1606009720::1757857833::1::::<><><>0<>0<>82d9c18d5c175f63073f01b667af737e<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 main.gd::GDScript/GDScript::6179598899500698285::1757923215::0::1::::<>Node<><>0<>0<><>::
-main.tscn::PackedScene::4631457313931891112::1757924387::0::1::::<><><>0<>0<><>::uid://cubpddhu0t20h::::res://main.gd<>uid://rfrov1wlhuhh::::res://player.tscn<>uid://bysrrjqm3h22d::::res://mob.tscn<>uid://ouy1ptyre1b7::::res://fonts/Montserrat-Medium.ttf<>uid://da463nvoge6nl::::res://score_label.gd<>uid://c4ydbgh6uabpj::::res://bgm.tscn<>uid://2nyod3b04sem::::res://combo.gd<>uid://d4cu1e1ukwkxb::::res://art/NewArt/country side road seamless.glb
+main.tscn::PackedScene::4631457313931891112::1757925071::0::1::::<><><>0<>0<><>::uid://cubpddhu0t20h::::res://main.gd<>uid://rfrov1wlhuhh::::res://player.tscn<>uid://bysrrjqm3h22d::::res://mob.tscn<>uid://ouy1ptyre1b7::::res://fonts/Montserrat-Medium.ttf<>uid://da463nvoge6nl::::res://score_label.gd<>uid://c4ydbgh6uabpj::::res://bgm.tscn<>uid://2nyod3b04sem::::res://combo.gd<>uid://d4cu1e1ukwkxb::::res://art/NewArt/country side road seamless.glb
 mob.gd::GDScript/GDScript::4409707075392839725::1757885163::0::1::::<>CharacterBody3D<><>0<>0<><>::
-mob.tscn::PackedScene::4109174775962339069::1757924387::0::1::::<><><>0<>0<><>::uid://b33dh4lwl6vbp::::res://mob.gd<>uid://dku08k54nuxql::::res://art/NewArt/Nissan GTR.glb
+mob.tscn::PackedScene::4109174775962339069::1757925071::0::1::::<><><>0<>0<><>::uid://b33dh4lwl6vbp::::res://mob.gd<>uid://dku08k54nuxql::::res://art/NewArt/Nissan GTR.glb
 player.gd::GDScript/GDScript::2329516870016556691::1757890178::0::1::::<>CharacterBody3D<><>0<>0<><>::
-player.tscn::PackedScene::1204590564778393197::1757924387::0::1::::<><><>0<>0<><>::uid://8go2jxs8jug6::::res://player.gd<>uid://3jfmsvsli3bq::::res://art/NewArt/Kitten.glb
+player.tscn::PackedScene::1204590564778393197::1757925071::0::1::::<><><>0<>0<><>::uid://8go2jxs8jug6::::res://player.gd<>uid://3jfmsvsli3bq::::res://art/NewArt/Kitten.glb
 score_label.gd::GDScript/GDScript::7221061950840886209::1757923256::0::1::::<>Label<><>0<>0<><>::
 ::res://art/::1757884216
 body.material::StandardMaterial3D/StandardMaterial3D::-1::1605908508::0::1::::<><><>0<>0<><>::
